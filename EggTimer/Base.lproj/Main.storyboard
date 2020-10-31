@@ -121,6 +121,19 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Uwk-7M-rbJ">
+                                                <rect key="frame" x="0.0" y="120.5" width="374" height="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="W7g-oz-pg0"/>
+                                                </constraints>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Uwk-7M-rbJ" secondAttribute="trailing" id="MyM-zp-gar"/>
+                                            <constraint firstItem="Uwk-7M-rbJ" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="m1y-z8-7tZ"/>
+                                            <constraint firstItem="Uwk-7M-rbJ" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="x5j-36-V0Y"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -134,6 +147,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="wI6-ag-afn" secondAttribute="trailing" id="dky-ZA-Z3J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eggBoilingProgressView" destination="Uwk-7M-rbJ" id="7MG-UF-G32"/>
+                        <outlet property="titleLabel" destination="XLm-5r-pSP" id="8cK-Wd-1Mr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
